@@ -6,13 +6,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    height: 100vh;
 }
 
 .canvas {
-    margin: 50px 0px;
-    width: 700px;
-    height: 700px;
+    margin: 0 0 20px 0;
+    width: 100vw;
+    height: 80vh;
     background-color: white;
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
@@ -62,4 +62,21 @@ body {
 
 .controls .controls__range {
     margin-bottom: 30px;
+}
+
+@media(max-width: 425px){
+    .canvas{
+        margin: 0;
+        margin-bottom: 20px;
+    }
+    .controls__colors .controls__color{
+        width: 25px;
+        height: 25px;
+    }
+    .controls .controls__btns {
+        margin-bottom: 20px;
+    }
+    .controls .controls__range {
+        margin-bottom: 20px;
+    }
 }
