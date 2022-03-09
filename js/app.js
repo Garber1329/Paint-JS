@@ -63,7 +63,8 @@ if (canvas) {
 	});
 
 
-	canvas.addEventListener("touchstart", handleStart, false);
+  canvas.addEventListener("touchstart", handleStart, false);
+  canvas.addEventListener("touchstart", handlCanvasClick);
 	canvas.addEventListener("touchend", handleEnd, false);
 	canvas.addEventListener("touchcancel", handleCancel, false);
 	canvas.addEventListener("touchmove", handleMove, false);
