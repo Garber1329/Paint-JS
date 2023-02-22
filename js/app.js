@@ -8,7 +8,7 @@ const clear = document.getElementById('jsClear');
 
 const INITIAL_COLOR = '#2c2c2c';
 let CANVAS_WIDTH = window.innerWidth;
-let CANVAS_HEIGHT = (window.innerHeight * 80) / 100;
+let CANVAS_HEIGHT = (window.innerHeight * 100) / 100;
 let line_strong;
 
 console.log(CANVAS_WIDTH,CANVAS_HEIGHT)
@@ -203,3 +203,7 @@ function ongoingTouchIndexById(idToFind) {
   }
   return -1;    // not found
 }
+
+document.querySelector(".controls__panel-toggle").addEventListener("click", () => {
+  document.querySelector(".controls").classList.toggle("controls__panel-open");
+});

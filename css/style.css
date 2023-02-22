@@ -7,21 +7,47 @@ body {
     flex-direction: column;
     align-items: center;
     height: 100vh;
+    overflow: hidden;
 }
 
 .canvas {
-    margin: 0 0 20px 0;
+    margin: 0;
     width: 100vw;
-    height: 80vh;
+    height: 100vh;
     background-color: white;
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .controls {
+    background: rgb(151, 151, 151);
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    padding: 30px;
+    position: absolute;
+    bottom: -217px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: bottom .5s cubic-bezier(0, .98, .33, 1);
+}
+
+.controls__panel-open{
+    bottom: 0!important;
+    transition: bottom .5s cubic-bezier(0, .98, .33, 1);
+}
+
+.controls__panel-toggle{
+    position: absolute;
+    top: -38px;
+    background: #979797;
+    color: #f6f9fc;
+    border: 0;
+    padding: 10px 15px 30px 10px;
+    font-size: 20px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    cursor: pointer;
 }
 
 .controls .controls__btns {
